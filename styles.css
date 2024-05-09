@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap');
+:root {
+    --mobile: 375px;
+    --desktop:1440px;
+    --Dark-cyan: #3C8067;
+    --Cream: #F2EBE3;
+    --Very-dark-blue: #1C232B;
+    --Dark-grayish-blue: #6C7289;
+    --White: #FFFFFF;
+    --font-size:14px;
+    --montserrat-small:500;
+    --montserrat-big:700;
+    --fraunces:700;
+}
+@media (max-width:500px) {
+    .container {
+        flex-direction:column;
+        width: 90vw;
+        justify-content:flex-start;
+        align-items: center;
+        min-width:unset;
+        max-width: unset;
+    }
+    .img {
+        width: 100%;
+    }
+}
+html {
+    font-size:14px;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--Cream);
+}
+.container {
+    min-width: 34rem;
+    display: flex;
+    background-color: var(--White);
+    border-radius: 20px;
+    overflow: hidden;
+    margin:1rem;
+    max-width: 40vw;
+}
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    align-items: center;
+    padding:2rem 1.5rem;
+    padding-right: 0.5;
+}
+#category {
+    align-self:flex-start;
+    font-family: Montserrat;
+    font-weight: var(--montserrat-small);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: var(--Dark-grayish-blue);
+    font-size: 12px;
+}
+h1 {
+    font-family: Fraunces;
+    font-weight: var(--fraunces);
+}
+p {
+    color: var(--Dark-grayish-blue);
+    font-family: Montserrat;
+    font-weight: var(--montserrat-small);
+}
+.prices {
+    display: flex;
+    align-self:flex-start;   
+    align-items: center;
+    padding-bottom:1rem;
+}
+.big-price {
+    padding:0 5px;
+    color: var(--Dark-cyan);
+    font-family: Fraunces;
+    font-weight: var(--fraunces);
+    font-size: x-large;
+}
+.small-price {
+    margin-left:10px;
+    text-decoration: line-through;
+    color: var(--Dark-grayish-blue);
+    font-family: Montserrat;
+    font-weight: var(--montserrat-small);
+}
+.cart {
+    padding:1rem 3rem;
+    background-color: var(--Dark-cyan);
+    color: var(--White);
+    font-family: Montserrat;
+    font-weight: var(--montserrat-small);
+    border-radius: 7px;
+}
+.cart:hover {
+    background-color:hsl(158, 53%, 18%);
+    cursor:pointer;
+}
