@@ -21,27 +21,6 @@
 html {
     font-size:14px;
 }
-@media (max-width:500px) {
-    .container {
-        flex-direction: column!important;
-        max-width: 24rem!important;
-        min-width: 80vw!important;
-        justify-content: flex-start!important;
-    }
-    picture {
-        flex-basis: 40%!important;
-    }
-    .info {
-        padding: 1.5rem 2rem!important;
-        flex-basis: 60%!important;
-    }
-    .info > * {
-        padding: 0.5rem!important;
-    }
-    .cart {
-        padding:1rem 3rem!important;
-    }
-}
 body {
     display: flex;
     justify-content: center;
@@ -133,4 +112,30 @@ p {
     display: inline;
     padding-right:1rem;
     font-size: 5px;
+}
+@media (max-width:500px) {
+    .container {
+        flex-direction: column;
+        max-width: 24rem;
+        min-width: 80vw;
+        justify-content: flex-start;
+    }
+    picture {
+        flex-basis: 40%;
+    }
+    .info {
+        padding: 1.5rem 2rem;
+        flex-basis: 60%;
+    }
+    .info > * {
+        padding: 0.5rem;
+    }
+    .cart {
+        padding:1rem 3rem;
+    }
+}
+@media (max-width:200px) {
+    html {
+        font-size: 10px;
+    }
 }
