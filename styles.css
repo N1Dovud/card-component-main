@@ -60,7 +60,7 @@ picture {
     min-width: 34rem;
     display: flex;
     background-color: var(--White);
-    border-radius: 20px;
+    border-radius: 10px;
     overflow: hidden;
     margin:1rem;
     max-width: 33vw;
