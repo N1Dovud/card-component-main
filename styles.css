@@ -13,28 +13,48 @@
     --montserrat-big:700;
     --fraunces:700;
 }
-@media (max-width:500px) {
-    .container {
-        flex-direction:column;
-        width: 90vw;
-        justify-content:flex-start;
-        align-items: center;
-        min-width:unset;
-        max-width: unset;
-    }
-    .img {
-        width: 100%;
-    }
+*,*::after,*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 html {
     font-size:14px;
+}
+@media (max-width:500px) {
+    .container {
+        flex-direction: column!important;
+        max-width: 24rem!important;
+        min-width: 80vw!important;
+        justify-content: flex-start!important;
+    }
+    picture {
+        flex-basis: 40%!important;
+    }
+    .info {
+        padding: 1.5rem 2rem!important;
+        flex-basis: 60%!important;
+    }
+    .info > * {
+        padding: 0.5rem!important;
+    }
+    .cart {
+        padding:1rem 3rem!important;
+    }
 }
 body {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    min-height:100vh;
     background-color: var(--Cream);
+}
+img,picture {
+    max-width: 100%;
+    display: block;
+}
+picture {
+    flex-basis: 50%;
 }
 .container {
     min-width: 34rem;
@@ -43,7 +63,7 @@ body {
     border-radius: 20px;
     overflow: hidden;
     margin:1rem;
-    max-width: 40vw;
+    max-width: 33vw;
 }
 .info {
     display: flex;
@@ -52,6 +72,7 @@ body {
     align-items: center;
     padding:2rem 1.5rem;
     padding-right: 0.5;
+    flex-basis: 50%;
 }
 #category {
     align-self:flex-start;
@@ -76,6 +97,7 @@ p {
     align-self:flex-start;   
     align-items: center;
     padding-bottom:1rem;
+    flex-wrap: wrap;
 }
 .big-price {
     padding:0 5px;
@@ -98,8 +120,18 @@ p {
     font-family: Montserrat;
     font-weight: var(--montserrat-small);
     border-radius: 7px;
+    display: flex;
+    align-items: center;
+    border: none;
+    align-self: stretch;
+    justify-content: center;
 }
 .cart:hover {
     background-color:hsl(158, 53%, 18%);
     cursor:pointer;
+}
+.svg {
+    display: inline;
+    padding-right:1rem;
+    font-size: 5px;
 }
